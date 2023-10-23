@@ -1,0 +1,75 @@
+.form {
+  width: 100%;
+  margin: auto;
+}
+.form h1 {
+  color: var(--gray-white, #fff);
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+
+.form p {
+  color: var(--gray-gray-3, #aaa);
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.toast_container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.links:last-child {
+  margin-top: 37px;
+}
+
+@media screen and (max-width: 499px) {
+  .form {
+    padding: 30px 40px 0 40px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  .form {
+    padding: 36px 70px 0 70px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .form {
+    padding: 40px 40px 70px 40px;
+    max-width: 440px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .form {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #222327;
+  }
+}
