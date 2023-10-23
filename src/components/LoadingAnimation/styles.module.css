@@ -1,0 +1,27 @@
+.loading {
+  width: 90%;
+  margin: auto;
+}
+@media screen and (min-width: 499px) {
+  .loading {
+    padding: 30px 40px 0 40px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  .loading {
+    padding: 36px 70px 0 70px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .loading {
+    padding: 40px 40px 70px 40px;
+    max-width: 440px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .loading {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+    background-color: #222327;
+  }
+}
