@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  padding: 50px 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  width: 65px;
+  height: 32px;
+  margin-left: auto;
+}
+
+.header button {
+  padding: 10px 19px;
+  fill: rgba(255, 255, 255, 0.2);
+  color: var(--gray-white, #fff);
+  text-align: center;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* @media screen and (min-width: 800px) and (max-width: 1279px) {
+  .header {
+    max-width: 440px;
+  }
+} */
+
+@media (min-width: 500px) and (max-width: 799px) {
+  .header {
+    padding-right: 65px;
+  }
+}
+
+@media (max-width: 499px) {
+  .header {
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header img {
+    margin-left: 220px;
+  }
+}
