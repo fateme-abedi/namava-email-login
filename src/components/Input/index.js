@@ -14,14 +14,8 @@ export default function Input({
   onKeyDown,
   isPassword,
 }) {
-  const [isTyping, setIsTyping] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [icon, setIcon] = useState(eyeOff);
-
-  const handleInputChange = (e) => {
-    onChange(e);
-    setIsTyping(e.target.value !== "");
-  };
 
   const togglePasswordVisibility = () => {
     if (showPassword) {
@@ -34,12 +28,12 @@ export default function Input({
 
   return (
     <div className={styles.input_wrapper}>
-      {isTyping && <label className={styles.label}>{label}</label>}
+      {value && <label className={styles.label}>{label}</label>}
 
       <input
         type={isPassword && showPassword ? "text" : type}
         value={value}
-        onChange={handleInputChange}
+        onChange={onChange}
         placeholder={placeholder}
         name={name}
         onKeyDown={onKeyDown}

@@ -60,18 +60,19 @@ export default function Login() {
       setIsLoading(false);
     }
   };
-  // const handleKeyDown = (e) => {
-  //   if (e.key === "Enter") {
-  //     console.log("email: " + inputsData.email);
-  //     handleSubmit(e);
-  //   }
-  // };
-  // useEffect(() => {
-  //   document.addEventListener("keydown", handleKeyDown);
-  //   return () => {
-  //     removeEventListener("keydown", handleKeyDown);
-  //   };
-  // }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Enter") {
+        console.log("email: " + inputsData.email);
+        handleSubmit(e);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleSubmit]);
 
   return isLoading ? (
     <LoadingAnimation />
