@@ -10,6 +10,7 @@ export default function Form({
   onInputChange,
   onSubmit,
   toastMessage,
+  onKeyDown,
 }) {
   const linksData = [
     {
@@ -24,15 +25,15 @@ export default function Form({
     },
   ];
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      console.log("email: " + inputsData.email);
-      onSubmit(e);
-    }
-  };
+  // const handleKeyDown = (e) => {
+  //   if (e.key === "Enter") {
+  //     console.log("email: " + inputsData.email);
+  //     onSubmit(e);
+  //   }
+  // };
 
   return (
-    <form className={styles.form} onSubmit={onSubmit} onKeyDown={handleKeyDown}>
+    <form className={styles.form} onSubmit={onSubmit}>
       <h1>ورود از طریق ایمیل</h1>
       <p>لطفا ایمیل و رمز عبور خود را وارد کنید</p>
       <div className={styles.inputs}>
@@ -42,7 +43,6 @@ export default function Form({
           onChange={onInputChange}
           placeholder="ایمیل"
           name="email"
-          onKeyDown={handleKeyDown}
           label="ایمیل"
         />
         <Input
@@ -52,7 +52,6 @@ export default function Form({
           placeholder="رمز عبور"
           name="password"
           label="رمز عبور"
-          onKeyDown={handleKeyDown}
           isPassword
         />
       </div>
@@ -61,6 +60,7 @@ export default function Form({
       <div className={styles.toast_container}>
         {toastMessage && <Toast message={toastMessage} />}
       </div>
+      
       <div className={styles.links}>
         {linksData.map((link) => (
           <Link key={link.id} href={link.href} children={link.children} />
