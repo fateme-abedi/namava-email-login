@@ -55,7 +55,7 @@ export default function Login() {
 
       setIsLoading(false);
     } catch (error) {
-      setToastMessage(error);
+      setToastMessage("هنگام ورود خطایی رخ داده است لطفا دوباره امتحان کنید");
       setIsLoading(false);
     }
   };
@@ -63,7 +63,6 @@ export default function Login() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Enter") {
-        console.log("email: " + inputsData.email);
         handleSubmit(e);
       }
     };
