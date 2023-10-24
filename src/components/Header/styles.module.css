@@ -29,12 +29,15 @@
   outline: none;
   cursor: pointer;
 }
-
-/* @media screen and (min-width: 800px) and (max-width: 1279px) {
-  .header {
-    max-width: 440px;
-  }
-} */
+.header button a {
+  color: var(--gray-white, #fff);
+  text-align: center;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
 @media (min-width: 500px) and (max-width: 799px) {
   .header {

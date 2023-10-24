@@ -5,7 +5,9 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <img src="./assets/namava.png" alt="namava-logo" />
-      <button>ثبت نام</button>
+      <button>
+        <a href="https://www.namava.ir/auth/register-phone">ثبت نام</a>
+      </button>
     </div>
   );
 }

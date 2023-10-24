@@ -31,7 +31,6 @@ export default function Login() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputsData({ ...inputsData, [name]: value });
-    console.log(`name: ${name}: val:${value}`);
   };
 
   const handleSubmit = async (e) => {
