@@ -10,7 +10,6 @@ export default function Form({
   onInputChange,
   onSubmit,
   toastMessage,
-  onKeyDown,
 }) {
   const linksData = [
     {
@@ -25,12 +24,6 @@ export default function Form({
     },
   ];
 
-  // const handleKeyDown = (e) => {
-  //   if (e.key === "Enter") {
-  //     console.log("email: " + inputsData.email);
-  //     onSubmit(e);
-  //   }
-  // };
 
   return (
     <form className={styles.form} onSubmit={onSubmit}>
