@@ -49,10 +49,12 @@ export default function Login() {
       );
       if (response.succeeded) {
         window.open("https://www.namava.ir/profile-list");
-      } else {
-        setToastMessage("نام کاربری یا رمز ورودی صحیح نمی باشد. ");
       }
-
+      if (!response.succeeded && response.error.code === 10002) {
+        showToast("فرمت ایمیل صحیح نمی باشد.");
+      } else {
+        showToast("نام کاربری یا رمز ورودی صحیح نمی باشد. ");
+      }
       setIsLoading(false);
     } catch (error) {
       setToastMessage("هنگام ورود خطایی رخ داده است لطفا دوباره امتحان کنید");
@@ -60,17 +62,17 @@ export default function Login() {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
+    }
+  };
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Enter") {
-        handleSubmit(e);
-      }
-    };
     document.addEventListener("keydown", handleKeyDown);
     return () => {
-      removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [handleSubmit]);
+  }, [handleSubmit, handleKeyDown]);
 
   return (
     <Form

@@ -8,9 +8,10 @@ const PostLoginData = async (UserName, Password) => {
     return response.data;
   } catch (error) {
     if (error.response && error.response.data && error.response.data.error) {
+      console.log(error.response.data.error.message);
       return error.response.data.error.message;
     } else {
-      throw "An unexpected error occurred";
+      return "An unexpected error occurred";
     }
   }
 };
