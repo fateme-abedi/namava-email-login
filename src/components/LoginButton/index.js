@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./styles.module.css";
+import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 
-export default function LoginButton({ disabled }) {
+export default function LoginButton(props) {
+  const { disabled, isLoading } = props;
   return (
     <button disabled={disabled} className={styles.button}>
-      ورود
+      {isLoading ? <LoadingAnimation /> : "ورود"}
     </button>
   );
 }

@@ -72,14 +72,13 @@ export default function Login() {
     };
   }, [handleSubmit]);
 
-  return isLoading ? (
-    <LoadingAnimation />
-  ) : (
+  return (
     <Form
       inputsData={inputsData}
       onInputChange={handleInputChange}
       onSubmit={handleSubmit}
       toastMessage={toastMessage}
+      isLoading={isLoading}
     />
   );
 }

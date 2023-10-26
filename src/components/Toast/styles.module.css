@@ -2,16 +2,12 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
-  background: var(--red-red, #d95c5c);
+  background: #d95c5c;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: var(--gray-white, #fff);
   text-align: right;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: IRANYekan;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   padding: 8px 16px;
   margin-bottom: 10px;
 }
