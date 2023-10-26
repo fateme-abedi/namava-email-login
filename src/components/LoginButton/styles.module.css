@@ -5,15 +5,11 @@
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
-  color: var(--gray-white, #fff);
+  color: #fff;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   width: 100%;
-  font-family: IRANYekan;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   margin-top: 30px;
 }
 

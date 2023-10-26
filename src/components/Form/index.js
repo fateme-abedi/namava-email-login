@@ -5,12 +5,9 @@ import Toast from "../Toast/index.js";
 import LoginButton from "./../LoginButton/index.js";
 import Link from "./../Link/index.js";
 
-export default function Form({
-  inputsData,
-  onInputChange,
-  onSubmit,
-  toastMessage,
-}) {
+export default function Form(props) {
+  const { inputsData, onInputChange, onSubmit, toastMessage, isLoading } =
+    props;
   const linksData = [
     {
       id: 1,
@@ -23,7 +20,6 @@ export default function Form({
       children: "ورود از طریق شماره تلفن همراه",
     },
   ];
-
 
   return (
     <form className={styles.form} onSubmit={onSubmit}>
@@ -48,12 +44,16 @@ export default function Form({
           isPassword
         />
       </div>
-      <LoginButton disabled={!inputsData.email || !inputsData.password} />
+      <LoginButton
+        disabled={!inputsData.email || !inputsData.password}
+        isLoading={isLoading}
+      />
+      {toastMessage && (
+        <div className={styles.toast_container}>
+          <Toast message={toastMessage} />
+        </div>
+      )}
 
-      <div className={styles.toast_container}>
-        {toastMessage && <Toast message={toastMessage} />}
-      </div>
-      
       <div className={styles.links}>
         {linksData.map((link) => (
           <Link key={link.id} href={link.href} children={link.children} />

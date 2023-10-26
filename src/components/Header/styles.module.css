@@ -16,27 +16,15 @@
 .header button {
   padding: 10px 19px;
   fill: rgba(255, 255, 255, 0.2);
-  color: var(--gray-white, #fff);
+  color:  #fff;
   text-align: center;
-  font-family: IRANYekan;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   border: none;
   outline: none;
   cursor: pointer;
-}
-.header button a {
-  color: var(--gray-white, #fff);
-  text-align: center;
-  font-family: IRANYekan;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
 @media (min-width: 500px) and (max-width: 799px) {

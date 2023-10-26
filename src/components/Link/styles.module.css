@@ -1,16 +1,11 @@
 .link {
-  margin-top: 35px;
   margin-bottom: 4px;
 }
 
 .link a {
-  color: var(--gray-white, #fff);
+  color: #fff;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: IRANYekan;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   cursor: pointer;
 }

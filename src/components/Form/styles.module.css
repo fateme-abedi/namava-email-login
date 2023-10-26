@@ -3,26 +3,18 @@
   margin: auto;
 }
 .form h1 {
-  color: var(--gray-white, #fff);
+  color: #fff;
   text-align: right;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: IRANYekan;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   margin-bottom: 18px;
 }
 
 .form p {
-  color: var(--gray-gray-3, #aaa);
+  color: #aaa;
   text-align: right;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: IRANYekan;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .inputs {
@@ -71,5 +63,6 @@
   .form {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #222327;
+    border-radius: 6px;
   }
 }
