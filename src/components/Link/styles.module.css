@@ -1,0 +1,11 @@
+.link {
+  margin-bottom: 4px;
+}
+
+.link a {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
