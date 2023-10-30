@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LoginUserByEmail from "../../services/LoginUserByEmail";
+import LoginUserByEmail from "./../../../services/LoginUserByEmail";
 import LoadingAnimation from "./../LoadingAnimation/LoadingAnimation.js";
 import Form from "../Form/index.js";
 

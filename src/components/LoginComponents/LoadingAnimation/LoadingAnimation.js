@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styles from "./styles.module.css";
 import lottie from "lottie-web";
-import animationData from "../../constant/loading.json";
+import animationData from "./../../../constant/loading.json";
 
 export default function LoadingAnimation() {
   const containerRef = useRef(null);

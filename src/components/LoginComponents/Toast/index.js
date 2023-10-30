@@ -17,7 +17,7 @@ export default function Toast({ message }) {
   return (
     isVisible && (
       <div className={styles.toast}>
-        <img src="./assets/warning.png" alt="Warning" />
+        <img src="./assets/images/warning.png" alt="Warning" />
         <span>{message}</span>
       </div>
     )
