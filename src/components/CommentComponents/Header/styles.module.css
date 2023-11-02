@@ -1,0 +1,81 @@
+.header {
+  background: #000;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 30px 20px;
+  height: 170px;
+}
+.nav {
+  margin-left: auto;
+}
+
+.hamburgerMenu {
+  cursor: pointer;
+}
+.menu span {
+  color: #fff;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
+.logOut {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.buttons img {
+  width: 20px;
+  height: 20px;
+}
+@media screen and (max-width: 768px) {
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    z-index: 10;
+    text-align: right;
+    padding: 10px;
+  }
+
+  .menu span {
+    margin-bottom: 10px;
+  }
+  .menuActive {
+    display: flex;
+    flex-direction: column;
+    background: #222327;
+    z-index: 10;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hamburgerMenu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .menu span {
+    margin-left: 20px;
+  }
+}
