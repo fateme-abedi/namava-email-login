@@ -1,0 +1,12 @@
+.comment {
+  background: #222327;
+  width: 100%;
+  margin: auto;
+  padding: 32px 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .comment {
+    width: 700px;
+  }
+}
