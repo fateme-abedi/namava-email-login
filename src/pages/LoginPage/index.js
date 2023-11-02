@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import LoginUserByEmail from "./../../../services/LoginUserByEmail";
-import LoadingAnimation from "./../LoadingAnimation/LoadingAnimation.js";
-import Form from "../Form/index.js";
+import styles from "./styles.module.css";
+import LoginUserByEmail from "../../services/LoginUserByEmail.js";
+import Form from "../../components/LoginComponents/Form/index.js";
+import Header from "../../components/LoginComponents/Header/index.js";
 
-export default function Login() {
+export default function LoginPage() {
   const [inputsData, setInputsData] = useState({
     email: "",
     password: "",
@@ -75,12 +76,15 @@ export default function Login() {
   }, [handleSubmit, handleKeyDown]);
 
   return (
-    <Form
-      inputsData={inputsData}
-      onInputChange={handleInputChange}
-      onSubmit={handleSubmit}
-      toastMessage={toastMessage}
-      isLoading={isLoading}
-    />
+    <div className={styles.login}>
+      <Header />
+      <Form
+        inputsData={inputsData}
+        onInputChange={handleInputChange}
+        onSubmit={handleSubmit}
+        toastMessage={toastMessage}
+        isLoading={isLoading}
+      />
+    </div>
   );
 }
