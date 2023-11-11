@@ -1,6 +1,7 @@
-body {
+.login {
   width: 100%;
   min-width: 100%;
   min-height: 100vh;
   background-color: #121212;
+  background-image: radial-gradient(at bottom, #1993ff, #121212 70%);
 }

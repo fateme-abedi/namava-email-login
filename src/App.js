@@ -1,15 +1,17 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/CommentComponents/Header/index.js";
-import Login from "./components/Login";
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 import CommentPage from "./pages/CommentPage";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <CommentPage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/comments" element={<CommentPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

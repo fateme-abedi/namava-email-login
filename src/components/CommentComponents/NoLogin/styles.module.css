@@ -1,0 +1,66 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background: #37383e;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+.modalSvg {
+  display: flex;
+  align-items: center;
+}
+.modalSvg svg {
+  width: 40px;
+  height: 40px;
+}
+.text {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 !important;
+}
+
+.modalActions {
+  display: flex;
+  align-items: center;
+}
+
+.modalActions .register {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 12px !important;
+  text-align: center;
+  font-weight: 700;
+  margin-left: 24px;
+  width: 100px;
+  height: 42px;
+  cursor: pointer;
+}
+.modalActions .login {
+  background: rgb(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 700;
+  width: 100px;
+  height: 42px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .modal {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding: 0 16px;
+    justify-content: space-between;
+  }
+  .text {
+    margin-left: auto;
+  }
+}
