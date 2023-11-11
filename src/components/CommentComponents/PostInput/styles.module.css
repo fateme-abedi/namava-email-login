@@ -1,0 +1,36 @@
+.input {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.input img {
+  margin-left: 20px;
+}
+.input input {
+  border-radius: 5px;
+  background: #f2f2f2;
+  padding: 10px 12px;
+  color: #222327;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
+.input input::placeholder {
+  color: #666;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
+.error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  margin-right: 75px;
+}
+.error h3 {
+  color: var(--red-light, #e48c8c);
+  text-align: right;
+  font-size: 10px;
+  font-weight: 400;
+}

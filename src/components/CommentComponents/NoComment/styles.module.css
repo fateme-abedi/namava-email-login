@@ -1,0 +1,14 @@
+.noComment {
+  border-radius: 5px;
+  background: #222327;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.noComment h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px auto;
+}

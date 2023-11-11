@@ -1,0 +1,6 @@
+.comments {
+  margin-top: 40px;
+}
+.comments :last-child {
+  border-bottom: none !important;
+}

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
+import { useNavigate } from "react-router-dom";
 import LoginUserByEmail from "../../services/LoginUserByEmail.js";
 import Form from "../../components/LoginComponents/Form/index.js";
 import Header from "../../components/LoginComponents/Header/index.js";
+import { setCookie } from "../../utils/cookieUtils.js";
 
 export default function LoginPage() {
   const [inputsData, setInputsData] = useState({
@@ -11,6 +13,7 @@ export default function LoginPage() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
+  const navigate = useNavigate();
 
   const showToast = (message) => {
     setToastMessage(message);
@@ -49,10 +52,8 @@ export default function LoginPage() {
         inputsData.password
       );
       if (response.succeeded) {
-        window.open("https://www.namava.ir/profile-list");
-      }
-      if (!response.succeeded && response.error.code === 10002) {
-        showToast("فرمت ایمیل صحیح نمی باشد.");
+        setCookie("isLogin", true);
+        navigate("/comments");
       } else {
         showToast("نام کاربری یا رمز ورودی صحیح نمی باشد. ");
       }
